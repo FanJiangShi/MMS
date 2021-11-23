@@ -1,0 +1,17 @@
+This document provides details on using Slurm to replicate Table IV and Table V.
+Slurm is a job scheduler for Linux and Unix-like kernels, used by many of the world's supercomputer systems and computer clusters.
+To run jobs on a supercomputer system using Slurm, the following steps need to be followed:
+Step1. Connect to the supercomputer system by using ssh (Windows users will have to install appropriate ssh software such as PuTTY).
+Step2. Setup a file transfer system by installing softwares such as FileZilla, which allows you to move files to and from the supercomputer.
+Step3. Transfer the job files such as "datagenDelta_test500.m", "power500R2m01.m", "cpowerm01_test500.m" and function file "newexplogit_4para" to the folder on the supercomputer.
+Step4. Create a job submission file in the same folder as the aforementioned matlab files on the supercomputer.
+       This could be done by typing the following commands in the command-line after connected to the supercomputer:
+       cd /target_path_on_the_super_computer
+       emacs name_of_job_submission_file
+       The second command opens up EMACS editor and you will need to type in everything specified in "slurm_job_submission_file.txt" (the matlab file name needs to be adjusted accordingly), and save
+       the file. Then submit your job submission file to the supercomputer. An example command for job submission looks like:
+       sbatch -p group_name -A group_name name_of_job_submission_file
+Step5. Collect all output data from the supercomputer once simulation is finished, and put them in the same folder as the matlab file
+       named "combine.m", which is used to combine these data files and compute the test results. Adjust the data file name in "combine.m" accordingly
+       and run "combine.m" gives you the result.
+       

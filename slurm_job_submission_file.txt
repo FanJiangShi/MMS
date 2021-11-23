@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name="jobname"
+#SBATCH --account=your_group_name
+#SBATCH --partition=your_partition_name
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --time=4:30:00
+#SBATCH --mem=40G
+#SBATCH --mail-user=your_email_address
+#SBATCH --mail-type=ALL
+#SBATCH --array=1-100
+
+module load matlab_2018a
+
+matlab -nodisplay < your_matlab_filename.m
