@@ -1,4 +1,4 @@
-This file explains how the simulation tables in the paper "equential Estimation and Inference in Games of Incomplete Information with Non-separable Unobserved Heterogeneity" are generated.
+This file explains how the simulation tables in the paper "Estimation and Inference in Games of Incomplete Information with Non-separable Unobserved Heterogeneity and Large State Space" are generated.
 
 Table I: "datagen_18.m" generates data used in this table. "mix_18_8_auto_all_usedata.m" generates all rows corresponding to l1=8,
 "mix_18_9_auto_all_usedata.m" generates all rows corresponding to l1=9 and so on.
